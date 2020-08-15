@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+// custom imports
+import Home from "./components/Home.js";
+import FactorizationCalc from "./components/factorizationCalc/FactorizationCalc.js";
+import BMICalc from "./components/BMICalc/BMICalc.js"
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link,
+	Redirect,
+} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+				<Switch>
+					<Route exact path="/home">
+						<Home />
+					</Route>
+					<Route exact path="/factorization-calc">
+						<FactorizationCalc />
+					</Route>
+					<Route exact path="/bmi-calc">
+						<BMICalc />
+					</Route>
+					<Redirect to="/home" />
+				</Switch>
+			</Router>
+		</div>
+	);
 }
 
 export default App;
