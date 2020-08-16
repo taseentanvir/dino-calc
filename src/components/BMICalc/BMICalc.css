@@ -3,7 +3,12 @@
 }
 
 body {
-  background-color: #172b4d;
+  /*background-color: #172b4d;*/
+   background:
+    linear-gradient(45deg, #1E2E49 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, #101928 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, #1E2E49 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, #101928 100%, hsla(35, 95%, 55%, 0) 70%);
 }
 
 input {
@@ -25,7 +30,7 @@ label {
 }
 
 .calculate-btn {
-  background-color: #3f51b5;
+  background-color: #0a0f28;
   padding: 15px 50px;
   color: white;
   font-size: 16px;
@@ -102,4 +107,17 @@ label {
 
 .delete-btn:focus {
   background-color: #e74c3c;
+}
+
+
+.back-button{
+  background-color: white;
+}
+
+.icon{
+  margin: 72px;
+}
+
+.container{
+  margin-top: -155px !important;
 }

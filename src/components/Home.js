@@ -9,56 +9,70 @@ import {
 import TypeIt from "typeit-react";
 import { motion } from "framer-motion";
 import "../App.css";
-import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
 	return (
 		<>
 			<div className="home">
-				<TypeIt
-					style={{ fontSize: 40 }}
-					options={{
-						speed: 50,
-						waitUntilVisible: true,
-					}}
-					getBeforeInit={(instance) => {
-						const firstPause = 400;
-						const secondPause = 300;
-						const thirdPause = 500;
-						const delay = 100;
-						const extraDelay = 100;
+				<div className="text-wrapper">
+					{" "}
+					<TypeIt
+						className="animated-text"
+						options={{
+							speed: 50,
+							waitUntilVisible: true,
+						}}
+						getBeforeInit={(instance) => {
+							const firstPause = 400;
+							const secondPause = 300;
+							const thirdPause = 500;
+							const delay = 100;
+							const extraDelay = 100;
 
-						const totalPaused =
-							firstPause +
-							secondPause +
-							thirdPause +
-							delay * 3 +
-							extraDelay;
+							const totalPaused =
+								firstPause +
+								secondPause +
+								thirdPause +
+								delay * 3 +
+								extraDelay;
 
-						console.log(totalPaused);
-						instance
-							.type("Hi, I'n")
-							.pause(firstPause)
-							.delete(1)
-							.pause(secondPause)
-							.type("m tasin")
-							.pause(thirdPause)
-							.delete(2)
-							.type("een", { delay })
-							.move(-5, { delay })
-							.delete(1)
-							.type("T")
-							.move("END", { delay })
-							.type(" :D")
-							.type("<br>")
-							.type("And I made calculations easy for you");
+							console.log(totalPaused);
+							instance
+								.type("Hi, I'n")
+								.pause(firstPause)
+								.delete(1)
+								.pause(secondPause)
+								.type("m tasin")
+								.pause(thirdPause)
+								.delete(2)
+								.type("een", { delay })
+								.move(-5, { delay })
+								.delete(1)
+								.type("T")
+								.move("END", { delay })
+								.type("!")
+								.type("<br>")
+								.type("And I made calculations easy for", {
+									delay,
+								})
+								.move(-4, { delay })
+								.delete(4)
+								.pause(firstPause)
+								.type("<em><strong>easier</strong></em>", {
+									delay,
+								})
+								.pause(secondPause)
+								.move("END")
+								.type(" you :D");
 
-						// Remember to return it!
-						return instance;
-					}}
-				/>
+							// Remember to return it!
+							return instance;
+						}}
+					/>
+				</div>
+
 				<motion.div
-					className="rectangle"
+					className="calc-btn-wrapper"
 					initial={{
 						opacity: 0,
 						y: 50,
@@ -70,11 +84,13 @@ const Home = () => {
 						opacity: 1,
 						y: 0,
 						x: 0,
-						transition: { delay: 7.2 },
+						transition: { delay: 9 }, // delay will be 9
 					}}
 				>
 					<Router>
 						<Link
+							style={{marginRight: 10}}
+							className="calc-btn waves-effect waves-light"
 							onClick={() => {
 								window.location.href = "/factorization-calc";
 							}}
@@ -83,6 +99,7 @@ const Home = () => {
 							Factorization Calculator
 						</Link>
 						<Link
+							className="calc-btn waves-effect waves-light"
 							onClick={() => {
 								window.location.href = "/bmi-calc";
 							}}
