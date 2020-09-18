@@ -1,5 +1,26 @@
-.wrapper{
-	background: white;
-	height: 100vh;
-	
+.wrapper {
+  background: linear-gradient(45deg, black 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, #35507f 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, #35507f 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, black 100%, hsla(35, 95%, 55%, 0) 70%);
+  height: 100vh;
+  color: white;
+}
+
+input {
+  background-color: #fff !important;
+  border-radius: 44px !important;
+  width: 90% !important;
+  padding: 0px 15px !important;
+}
+
+input:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+label {
+  display: block;
+  color: #fff !important;
+  font-size: 1rem !important;
 }

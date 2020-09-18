@@ -44,14 +44,14 @@ const BMICalc = () => {
 
   return (
     <>
-      <a
+      <button
         onClick={() => {
           window.history.back();
         }}
         className="icon btn-floating waves-effect waves-light red"
       >
         <i className="material-icons">arrow_back</i>
-      </a>
+      </button>
       <div className="container">
         <div className="row center">
           <h1 className="white-text"> BMI Tracker </h1>
