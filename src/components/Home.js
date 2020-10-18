@@ -2,14 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import TypeIt from "typeit-react";
 import { motion } from "framer-motion";
-import Logo from "./Logo";
+// import Logo from "./Logo";
 import "../App.css";
 
 const Home = () => {
   return (
     <>
       <div className="home">
-        <Logo />
+        {/* <Logo /> */}
         <div className="text-wrapper">
           <TypeIt
             className="animated-text"
@@ -75,11 +75,11 @@ const Home = () => {
             opacity: 1,
             y: 0,
             x: 0,
-            transition: { delay: 9 }, // delay will be 9
+            transition: { delay: 8 }, // delay will be 9
           }}
         >
           <Router>
-            <Link
+            {/* <Link
               style={{ marginRight: 10 }}
               className="calc-btn waves-effect waves-light"
               onClick={() => {
@@ -88,7 +88,7 @@ const Home = () => {
               to="/factorization-calc"
             >
               Factorization Calculator
-            </Link>
+            </Link> */}
             <Link
               className="calc-btn waves-effect waves-light"
               onClick={() => {
